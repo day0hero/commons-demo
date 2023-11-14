@@ -4,6 +4,7 @@ clusterGroup:
 
   namespaces:
     - open-cluster-management
+    - openshift-pipelines
     - vault
     - golang-external-secrets
     - config-demo
@@ -16,10 +17,15 @@ clusterGroup:
       channel: release-2.8
       #csv: advanced-cluster-management.v2.6.1
 
+    pipelines:
+      name: openshift-pipelines-operator-rh
+      namespace: openshift-operators
+
   projects:
     - hub
     - config-demo
     - hello-world
+    - pipelines
 
   # Explicitly mention the cluster-state based overrides we plan to use for this pattern.
   # We can use self-referential variables because the chart calls the tpl function with these variables defined
