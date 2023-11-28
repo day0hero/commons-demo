@@ -9,7 +9,6 @@ clusterGroup:
     - golang-external-secrets
     - config-demo
     - hello-world
-    - sayhello
 
   subscriptions:
     acm:
@@ -85,12 +84,6 @@ clusterGroup:
       namespace: hello-world
       project: hello-world
       path: charts/all/hello-world
-
-    pipelines:
-      name: pipelines
-      namespace: sayhello
-      project: pipelines
-      path: charts/all/pipelines
 
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
