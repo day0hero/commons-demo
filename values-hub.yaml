@@ -9,6 +9,7 @@ clusterGroup:
     - golang-external-secrets
     - config-demo
     - hello-world
+    - sayhello
 
   subscriptions:
     acm:
@@ -26,6 +27,7 @@ clusterGroup:
     - config-demo
     - hello-world
     - pipelines
+    - saywhat
 
   # Explicitly mention the cluster-state based overrides we plan to use for this pattern.
   # We can use self-referential variables because the chart calls the tpl function with these variables defined
@@ -90,6 +92,12 @@ clusterGroup:
       namespace: openshift-pipelines
       project: pipelines
       path: charts/all/pipelines
+
+    saywhat:
+      name: saywhat
+      namespace: sayhello
+      project: saywhat
+      path: charts/apps/saywhat
 
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
