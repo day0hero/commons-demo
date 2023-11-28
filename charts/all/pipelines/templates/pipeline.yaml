@@ -2,7 +2,7 @@ apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
   name: say-things
-  namespace: openshift-pipelines
+  namespace: sayhello
 spec:
   tasks:
     - name: first-task

@@ -9,6 +9,7 @@ clusterGroup:
     - golang-external-secrets
     - config-demo
     - hello-world
+    - sayhello
 
   subscriptions:
     acm:
@@ -87,7 +88,7 @@ clusterGroup:
 
     pipelines:
       name: pipelines
-      namespace: openshift-pipelines
+      namespace: sayhello
       project: pipelines
       path: charts/all/pipelines
 
